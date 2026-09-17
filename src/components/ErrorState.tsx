@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     marginTop: Spacing.xl,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
     paddingHorizontal: Spacing.xl,
     paddingVertical: Spacing.md,
     borderRadius: BorderRadius.pill,

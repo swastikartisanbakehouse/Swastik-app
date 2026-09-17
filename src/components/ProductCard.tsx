@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
     textDecorationLine: 'line-through',
   },
   addBtn: {
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
     borderRadius: BorderRadius.sm,
     paddingHorizontal: Spacing.md,
     paddingVertical: 5,
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
   qtyControl: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
     borderRadius: BorderRadius.sm,
     overflow: 'hidden',
   },

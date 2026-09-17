@@ -14,7 +14,7 @@ const SECTOR_CONFIG: Record<string, { icon: string; bg: string; iconColor: strin
   BAKERY: { icon: 'cafe', bg: '#F8EFE4', iconColor: '#A06B36' },
   DAIRY: { icon: 'water', bg: '#EAF3FA', iconColor: '#3686C8' },
   SWEETS: { icon: 'nutrition', bg: '#FDF0DF', iconColor: '#D88A27' },
-  CONFECTIONERY: { icon: 'gift', bg: '#F5E6EC', iconColor: Colors.magenta },
+  CONFECTIONERY: { icon: 'gift', bg: '#F5E6EC', iconColor: Colors.maroon },
 };
 
 interface CategoryCardProps {
@@ -26,7 +26,7 @@ export function CategoryCard({ category, onPress }: CategoryCardProps) {
   const config = SECTOR_CONFIG[category.sector] ?? {
     icon: 'grid',
     bg: '#F5F5F5',
-    iconColor: Colors.magenta,
+    iconColor: Colors.maroon,
   };
 
   return (

@@ -81,7 +81,7 @@ export default function ProfileScreen() {
 
           <View style={styles.infoRow}>
             <View style={styles.infoIconWrap}>
-              <Ionicons name="person-outline" size={18} color={Colors.magenta} />
+              <Ionicons name="person-outline" size={18} color={Colors.maroon} />
             </View>
             <View style={styles.infoContent}>
               <Text style={styles.infoLabel}>Name</Text>
@@ -93,7 +93,7 @@ export default function ProfileScreen() {
 
           <View style={styles.infoRow}>
             <View style={styles.infoIconWrap}>
-              <Ionicons name="mail-outline" size={18} color={Colors.magenta} />
+              <Ionicons name="mail-outline" size={18} color={Colors.maroon} />
             </View>
             <View style={styles.infoContent}>
               <Text style={styles.infoLabel}>Email</Text>
@@ -105,7 +105,7 @@ export default function ProfileScreen() {
 
           <View style={styles.infoRow}>
             <View style={styles.infoIconWrap}>
-              <Ionicons name="call-outline" size={18} color={Colors.magenta} />
+              <Ionicons name="call-outline" size={18} color={Colors.maroon} />
             </View>
             <View style={styles.infoContent}>
               <Text style={styles.infoLabel}>Mobile</Text>
@@ -172,17 +172,17 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius: 40,
-    backgroundColor: Colors.magentaSubtle,
+    backgroundColor: Colors.maroonSubtle,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
-    borderColor: Colors.magentaLight,
+    borderColor: Colors.maroonLight,
     marginBottom: Spacing.md,
   },
   avatarText: {
     fontSize: FontSize.xl,
     fontWeight: FontWeight.bold,
-    color: Colors.magenta,
+    color: Colors.maroon,
   },
   name: {
     fontSize: FontSize.lg,
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: BorderRadius.sm,
-    backgroundColor: Colors.magentaSubtle,
+    backgroundColor: Colors.maroonSubtle,
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: Spacing.md,

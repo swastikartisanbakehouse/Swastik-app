@@ -55,7 +55,7 @@ function RootLayoutNav() {
         options={{
           headerShown: true,
           headerBackTitle: '',
-          headerTintColor: Colors.magenta,
+          headerTintColor: Colors.maroon,
           headerStyle: { backgroundColor: Colors.white },
           headerShadowVisible: false,
           title: '',
@@ -66,7 +66,7 @@ function RootLayoutNav() {
         options={{
           headerShown: true,
           headerBackTitle: '',
-          headerTintColor: Colors.magenta,
+          headerTintColor: Colors.maroon,
           headerStyle: { backgroundColor: Colors.white },
           headerShadowVisible: false,
           title: '',

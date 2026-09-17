@@ -157,7 +157,7 @@ export default function CartScreen() {
               onPress={() => router.push('/(tabs)')}
               accessibilityLabel="Continue shopping"
             >
-              <Ionicons name="arrow-back-outline" size={18} color={Colors.magenta} style={{ marginRight: 6 }} />
+              <Ionicons name="arrow-back-outline" size={18} color={Colors.maroon} style={{ marginRight: 6 }} />
               <Text style={styles.continueBtnText}>Continue Shopping</Text>
             </TouchableOpacity>
           </View>
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   shopBtn: {
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
     borderRadius: BorderRadius.pill,
     paddingHorizontal: Spacing.xl,
     paddingVertical: Spacing.md,
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
   qtyControl: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
     borderRadius: BorderRadius.sm,
     overflow: 'hidden',
   },
@@ -335,12 +335,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1.5,
-    borderColor: Colors.magenta,
+    borderColor: Colors.maroon,
     borderRadius: BorderRadius.md,
     paddingVertical: Spacing.md,
   },
   continueBtnText: {
-    color: Colors.magenta,
+    color: Colors.maroon,
     fontSize: FontSize.md,
     fontWeight: FontWeight.semiBold,
   },

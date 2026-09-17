@@ -9,7 +9,7 @@ interface LoadingStateProps {
 export function LoadingState({ message }: LoadingStateProps) {
   return (
     <View style={styles.container}>
-      <ActivityIndicator size="large" color={Colors.magenta} />
+      <ActivityIndicator size="large" color={Colors.maroon} />
       {message && <Text style={styles.message}>{message}</Text>}
     </View>
   );

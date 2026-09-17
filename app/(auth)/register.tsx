@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
   },
   registerBtn: {
     height: 52,
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
     borderRadius: BorderRadius.md,
     alignItems: 'center',
     justifyContent: 'center',
@@ -272,6 +272,6 @@ const styles = StyleSheet.create({
   footerLink: {
     fontSize: FontSize.sm,
     fontWeight: FontWeight.semiBold,
-    color: Colors.magenta,
+    color: Colors.maroon,
   },
 });

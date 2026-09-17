@@ -55,7 +55,7 @@ export function SearchBar({
       <Ionicons
         name="search"
         size={18}
-        color={isFocused ? Colors.magenta : Colors.gray500}
+        color={isFocused ? Colors.maroon : Colors.gray500}
         style={styles.searchIcon}
       />
       <TextInput
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.border,
   },
   containerFocused: {
-    borderColor: Colors.magenta,
+    borderColor: Colors.maroon,
   },
   searchIcon: {
     marginRight: Spacing.sm,

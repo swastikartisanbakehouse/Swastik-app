@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -4,
     right: -6,
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
     borderRadius: 10,
     minWidth: 16,
     height: 16,
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     marginRight: Spacing.xs,
   },
   filterChipActive: {
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
   },
   filterChipInactive: {
     backgroundColor: Colors.gray100,

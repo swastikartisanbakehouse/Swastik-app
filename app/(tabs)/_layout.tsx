@@ -3,7 +3,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { useAuthStore } from '../../src/store/authStore';
 import { Redirect } from 'expo-router';
 import { useCartStore } from '../../src/store/cartStore';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Platform } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors, FontSize, FontWeight } from '../../src/theme';
 
 function CartBadge() {
@@ -18,24 +19,30 @@ function CartBadge() {
 
 export default function TabsLayout() {
   const { token } = useAuthStore();
+  const insets = useSafeAreaInsets();
 
   if (!token) {
     return <Redirect href="/(auth)/login" />;
   }
 
+  // Ensure full clearance above system navigation bars (e.g. Android 3-button nav, iOS home bar)
+  const bottomInset = Math.max(insets.bottom, Platform.OS === 'android' ? 12 : 8);
+  const tabHeight = 54 + bottomInset;
+
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: Colors.magenta,
+        tabBarHideOnKeyboard: true,
+        tabBarActiveTintColor: Colors.maroon,
         tabBarInactiveTintColor: Colors.gray500,
         tabBarStyle: {
           backgroundColor: Colors.white,
           borderTopColor: Colors.border,
           borderTopWidth: 1,
-          height: 60,
-          paddingBottom: 8,
-          paddingTop: 4,
+          height: tabHeight,
+          paddingBottom: bottomInset,
+          paddingTop: 6,
         },
         tabBarLabelStyle: {
           fontSize: FontSize.xs,
@@ -94,7 +101,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -4,
     right: -8,
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
     borderRadius: 100,
     minWidth: 16,
     height: 16,

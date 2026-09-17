@@ -8,7 +8,7 @@ import {
   Image,
 } from 'react-native';
 import { useLocalSearchParams, useNavigation } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useLayoutEffect } from 'react';
 import { useProduct } from '../../src/hooks/useProduct';
@@ -28,6 +28,7 @@ export default function ProductScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const productId = parseInt(id ?? '0', 10);
   const navigation = useNavigation();
+  const insets = useSafeAreaInsets();
 
   const { data: product, isLoading, isError, refetch } = useProduct(productId);
   const { items, addItem, increaseQty, decreaseQty } = useCartStore();
@@ -69,7 +70,10 @@ export default function ProductScreen() {
 
   return (
     <SafeAreaView style={styles.safe} edges={['bottom']}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 100 + insets.bottom }}
+      >
         {/* Product Image */}
         <View style={styles.imageContainer}>
           {product.image ? (
@@ -178,7 +182,12 @@ export default function ProductScreen() {
       </ScrollView>
 
       {/* Add to Cart Footer */}
-      <View style={styles.footer}>
+      <View
+        style={[
+          styles.footer,
+          { paddingBottom: Math.max(insets.bottom, Spacing.base) },
+        ]}
+      >
         {product.is_available ? (
           quantity > 0 ? (
             <View style={styles.qtyFooter}>
@@ -187,7 +196,7 @@ export default function ProductScreen() {
                 style={styles.qtyBtn}
                 accessibilityLabel="Decrease quantity"
               >
-                <Ionicons name="remove" size={20} color={Colors.magenta} />
+                <Ionicons name="remove" size={20} color={Colors.maroon} />
               </TouchableOpacity>
               <Text style={styles.qtyText}>{quantity} in cart</Text>
               <TouchableOpacity
@@ -195,7 +204,7 @@ export default function ProductScreen() {
                 style={styles.qtyBtn}
                 accessibilityLabel="Increase quantity"
               >
-                <Ionicons name="add" size={20} color={Colors.magenta} />
+                <Ionicons name="add" size={20} color={Colors.maroon} />
               </TouchableOpacity>
             </View>
           ) : (
@@ -248,7 +257,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: Spacing.md,
     left: Spacing.md,
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
     borderRadius: BorderRadius.sm,
     paddingHorizontal: Spacing.sm,
     paddingVertical: 4,
@@ -269,14 +278,14 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.sm,
   },
   tag: {
-    backgroundColor: Colors.magentaSubtle,
+    backgroundColor: Colors.maroonSubtle,
     borderRadius: BorderRadius.pill,
     paddingHorizontal: Spacing.sm,
     paddingVertical: 3,
   },
   tagText: {
     fontSize: FontSize.xs,
-    color: Colors.magenta,
+    color: Colors.maroon,
     fontWeight: FontWeight.medium,
   },
   name: {
@@ -398,7 +407,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
     borderRadius: BorderRadius.md,
     paddingVertical: Spacing.md + 2,
   },
@@ -424,7 +433,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderWidth: 1.5,
-    borderColor: Colors.magenta,
+    borderColor: Colors.maroon,
     borderRadius: BorderRadius.md,
     paddingHorizontal: Spacing.xl,
     paddingVertical: Spacing.md,
@@ -433,7 +442,7 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: 18,
-    backgroundColor: Colors.magentaSubtle,
+    backgroundColor: Colors.maroonSubtle,
     alignItems: 'center',
     justifyContent: 'center',
   },

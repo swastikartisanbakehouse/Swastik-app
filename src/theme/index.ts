@@ -1,12 +1,23 @@
 // Swastik Design System — Theme Tokens
-// White + Magenta minimal premium theme
+// White + Maroon minimal premium theme
 
 export const Colors = {
-  // Brand
-  magenta: '#C2185B',
-  magentaDark: '#880E4F',
-  magentaLight: '#F8BBD9',
-  magentaSubtle: '#FDF0F5',
+  // Brand (Maroon #650000)
+  primary: '#650000',
+  primaryDark: '#4A0000',
+  primaryLight: '#E8B3B3',
+  primarySubtle: '#FDF0F0',
+
+  maroon: '#650000',
+  maroonDark: '#4A0000',
+  maroonLight: '#E8B3B3',
+  maroonSubtle: '#FDF0F0',
+
+  // Backward compatibility aliases
+  magenta: '#650000',
+  magentaDark: '#4A0000',
+  magentaLight: '#E8B3B3',
+  magentaSubtle: '#FDF0F0',
 
   // Backgrounds
   background: '#FFFFFF',
@@ -22,7 +33,7 @@ export const Colors = {
 
   // UI Elements
   border: '#EEEEEE',
-  borderFocus: '#C2185B',
+  borderFocus: '#650000',
   divider: '#F0F0F0',
 
   // States

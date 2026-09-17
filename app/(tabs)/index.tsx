@@ -95,8 +95,8 @@ export default function HomeScreen() {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            tintColor={Colors.magenta}
-            colors={[Colors.magenta]}
+            tintColor={Colors.maroon}
+            colors={[Colors.maroon]}
           />
         }
       >
@@ -108,7 +108,7 @@ export default function HomeScreen() {
             activeOpacity={0.8}
             accessibilityLabel="Change delivery location"
           >
-            <Ionicons name="location-sharp" size={18} color={Colors.magenta} style={styles.pinIcon} />
+            <Ionicons name="location-sharp" size={18} color={Colors.maroon} style={styles.pinIcon} />
             <View>
               <Text style={styles.deliverToText}>Deliver to</Text>
               <View style={styles.addressRow}>
@@ -138,7 +138,7 @@ export default function HomeScreen() {
               onPress={() => router.push('/(tabs)/profile')}
               accessibilityLabel="Profile"
             >
-              <Ionicons name="person" size={18} color={Colors.magenta} />
+              <Ionicons name="person" size={18} color={Colors.maroon} />
             </TouchableOpacity>
           </View>
         </View>
@@ -421,11 +421,11 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: 18,
-    backgroundColor: Colors.magentaSubtle,
+    backgroundColor: Colors.maroonSubtle,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
-    borderColor: Colors.magentaLight,
+    borderColor: Colors.maroonLight,
   },
   searchSection: {
     paddingHorizontal: Spacing.base,
@@ -437,7 +437,7 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.lg,
   },
   bannerCard: {
-    backgroundColor: '#880E4F',
+    backgroundColor: Colors.maroonDark,
     borderRadius: BorderRadius.lg,
     padding: Spacing.base,
     flexDirection: 'row',
@@ -476,7 +476,7 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
   },
   shopNowText: {
-    color: '#5D0935',
+    color: Colors.maroonDark,
     fontSize: FontSize.xs,
     fontWeight: FontWeight.bold,
     letterSpacing: 0.5,
@@ -514,7 +514,7 @@ const styles = StyleSheet.create({
   },
   activeDot: {
     width: 14,
-    backgroundColor: Colors.magenta,
+    backgroundColor: Colors.maroon,
   },
   inactiveDot: {
     width: 5,
